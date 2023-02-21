@@ -12,7 +12,7 @@ const App = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      {fontsLoaded ? <Loading /> : <GroupsScreen />}
+      {!fontsLoaded ? <Loading /> : <GroupsScreen />}
     </ThemeProvider>
   );
 }
