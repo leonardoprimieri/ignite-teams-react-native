@@ -1,8 +1,12 @@
 import { GroupsScreen } from "@screens/index";
+import theme from "@theme/index";
+import { ThemeProvider } from "styled-components";
 
 const App = () => {
   return (
-    <GroupsScreen />
+    <ThemeProvider theme={theme}>
+      <GroupsScreen />
+    </ThemeProvider>
   );
 }
 
