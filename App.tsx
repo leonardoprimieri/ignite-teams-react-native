@@ -1,4 +1,4 @@
-import { GroupsScreen } from "@screens";
+import { GroupsScreen } from "@screens/index";
 
 const App = () => {
   return (
