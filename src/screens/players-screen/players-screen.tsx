@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { FlatList } from "react-native"
 
-import { ButtonIcon, Filter, Header, ScreenTitle, TextInput } from "@components/index"
+import { ButtonIcon, Filter, Header, PlayerCard, ScreenTitle, TextInput } from "@components/index"
 import { Container, Form, HeaderList, NumberOfPlayers } from "./players-screen-styles"
 
 export const PlayersScreen = () => {
@@ -42,6 +42,14 @@ export const PlayersScreen = () => {
         />
         <NumberOfPlayers>{players.length}</NumberOfPlayers>
       </HeaderList>
+
+      <FlatList
+        data={players}
+        keyExtractor={item => item}
+        renderItem={({ item }) => (
+          <PlayerCard name={item} onRemove={() => { }} />
+        )}
+      />
     </Container>
   )
 }
