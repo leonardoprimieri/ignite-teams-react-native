@@ -1,4 +1,4 @@
-import { Header, ScreenTitle } from "@components/index"
+import { ButtonIcon, Header, ScreenTitle } from "@components/index"
 import { Container } from "./players-screen-styles"
 
 export const PlayersScreen = () => {
@@ -10,6 +10,8 @@ export const PlayersScreen = () => {
         title="Nome da turma"
         subtitle="Adicione a galera e separe os times"
       />
+
+      <ButtonIcon icon="home" />
     </Container>
   )
 }
