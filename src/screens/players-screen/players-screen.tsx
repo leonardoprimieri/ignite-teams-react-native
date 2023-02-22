@@ -1,4 +1,4 @@
-import { ButtonIcon, Header, ScreenTitle, TextInput } from "@components/index"
+import { ButtonIcon, Filter, Header, ScreenTitle, TextInput } from "@components/index"
 import { Container, Form } from "./players-screen-styles"
 
 export const PlayersScreen = () => {
@@ -16,6 +16,7 @@ export const PlayersScreen = () => {
         />
         <ButtonIcon icon="add" />
       </Form>
+      <Filter title="Time a" />
     </Container>
   )
 }
