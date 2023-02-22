@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { FlatList } from "react-native"
 
-import { ButtonIcon, Filter, Header, PlayerCard, ScreenTitle, TextInput } from "@components/index"
+import { Button, ButtonIcon, EmptyList, Filter, Header, PlayerCard, ScreenTitle, TextInput } from "@components/index"
 import { Container, Form, HeaderList, NumberOfPlayers } from "./players-screen-styles"
 
 export const PlayersScreen = () => {
@@ -49,7 +49,15 @@ export const PlayersScreen = () => {
         renderItem={({ item }) => (
           <PlayerCard name={item} onRemove={() => { }} />
         )}
+        ListEmptyComponent={() => <EmptyList message="Não há pessoas nesse time." />}
+        showsVerticalScrollIndicator
+        contentContainerStyle={[
+          { paddingBottom: 100 },
+          !players.length && { flex: 1 }
+        ]}
       />
+
+      <Button title="Remover turma" type="secondary" />
     </Container>
   )
 }
