@@ -1,4 +1,4 @@
-import { Header, ScreenTitle } from "@components/index"
+import { GroupCard, Header, ScreenTitle } from "@components/index"
 import { Container } from "./groups-screen-styles"
 
 export const GroupsScreen = () => {
@@ -6,6 +6,8 @@ export const GroupsScreen = () => {
     <Container>
       <Header />
       <ScreenTitle title="Turmas" subtitle="Jogue com a sua turma" />
+
+      <GroupCard title="sei la" onPress={() => console.log('opa')} />
     </Container>
   )
 }
