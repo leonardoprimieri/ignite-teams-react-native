@@ -1,1 +1,1 @@
-export * from './groups/groups-screen'
+export * from './groups-screen/groups-screen'
