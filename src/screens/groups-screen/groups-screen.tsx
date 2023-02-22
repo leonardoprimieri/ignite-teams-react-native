@@ -1,10 +1,10 @@
-import { EmptyList, GroupCard, Header, ScreenTitle } from "@components/index"
+import { Button, EmptyList, GroupCard, Header, ScreenTitle } from "@components/index"
 import { useState } from "react"
 import { FlatList } from "react-native"
 import { Container } from "./groups-screen-styles"
 
 export const GroupsScreen = () => {
-  const [groups, setGroups] = useState(['Turma 1', 'Turma 2', 'Turma 3'])
+  const [groups, setGroups] = useState([])
 
   return (
     <Container>
@@ -19,6 +19,7 @@ export const GroupsScreen = () => {
         contentContainerStyle={!groups.length && { flex: 1 }}
         ListEmptyComponent={() => <EmptyList message="Que tal cadastrar a primeira turma?" />}
       />
+      <Button title="Criar nova turma" />
     </Container>
   )
 }
