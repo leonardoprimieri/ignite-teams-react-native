@@ -1,4 +1,4 @@
-import { Button, Header, ScreenTitle } from '@components/index'
+import { Button, Header, ScreenTitle, TextInput } from '@components/index'
 import { Container, Content, Icon } from './create-group-styles'
 
 export const CreateGroupScreen = () => {
@@ -7,13 +7,12 @@ export const CreateGroupScreen = () => {
       <Header shouldShowBackButton />
       <Content>
         <Icon />
-
         <ScreenTitle
           title='Nova turma'
           subtitle='crie a turma para adicionar as pessoas'
         />
-
-        <Button title="Criar" />
+        <TextInput />
+        <Button title="Criar" style={{ marginTop: 20 }} />
       </Content>
     </Container>
   )
