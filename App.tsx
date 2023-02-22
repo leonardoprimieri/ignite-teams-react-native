@@ -1,4 +1,4 @@
-import { GroupsScreen } from "@screens/index";
+import { CreateGroupScreen } from "@screens/index";
 import theme from "@theme/index";
 import { ThemeProvider } from "styled-components";
 import { useFonts, Roboto_400Regular, Roboto_700Bold } from '@expo-google-fonts/roboto'
@@ -18,7 +18,7 @@ const App = () => {
         backgroundColor="transparent"
         translucent
       />
-      {!fontsLoaded ? <Loading /> : <GroupsScreen />}
+      {!fontsLoaded ? <Loading /> : <CreateGroupScreen />}
     </ThemeProvider>
   );
 }
