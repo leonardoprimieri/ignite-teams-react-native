@@ -1,4 +1,4 @@
-import { CreateGroupScreen } from "@screens/index";
+import { PlayersScreen } from "@screens/index";
 import theme from "@theme/index";
 import { ThemeProvider } from "styled-components/native";
 import { useFonts, Roboto_400Regular, Roboto_700Bold } from '@expo-google-fonts/roboto'
@@ -10,7 +10,7 @@ const App = () => {
     Roboto_400Regular,
     Roboto_700Bold
   })
-
+ 
   return (
     <ThemeProvider theme={theme}>
       <StatusBar
@@ -18,7 +18,7 @@ const App = () => {
         backgroundColor="transparent"
         translucent
       />
-      {!fontsLoaded ? <Loading /> : <CreateGroupScreen />}
+      {!fontsLoaded ? <Loading /> : <PlayersScreen />}
     </ThemeProvider>
   );
 }
