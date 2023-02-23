@@ -3,10 +3,18 @@ import { FlatList } from "react-native"
 
 import { Button, ButtonIcon, EmptyList, Filter, Header, PlayerCard, ScreenTitle, TextInput } from "@components/index"
 import { Container, Form, HeaderList, NumberOfPlayers } from "./players-screen-styles"
+import { useRoute } from "@react-navigation/native"
+
+type RouteParams = {
+  group: string
+}
 
 export const PlayersScreen = () => {
   const [players, setPlayers] = useState([])
   const [selectedTeam, setSelectedTeam] = useState('Time A')
+
+  const route = useRoute()
+  const { group } = route.params as RouteParams
 
   const handleTeamClick = (item: string) => {
     setSelectedTeam(item)
@@ -16,7 +24,7 @@ export const PlayersScreen = () => {
     <Container>
       <Header shouldShowBackButton />
       <ScreenTitle
-        title="Nome da turma"
+        title={group}
         subtitle="Adicione a galera e separe os times"
       />
       <Form>
