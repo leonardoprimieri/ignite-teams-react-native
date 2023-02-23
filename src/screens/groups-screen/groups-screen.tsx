@@ -10,7 +10,7 @@ export const GroupsScreen = () => {
   const navigation = useNavigation()
 
   const handleNewGroup = () => {
-    navigation.navigate('create-group')
+    navigation.navigate("create-group")
   }
 
   return (
